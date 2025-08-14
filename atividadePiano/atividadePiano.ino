@@ -1,3 +1,4 @@
+//Layslla Eduarda Oreti && Luca Dias
 int p1 = 3;
 int p2 = 4;
 int p3 = 5;
@@ -19,6 +20,8 @@ pinMode(p5,INPUT);
 pinMode(p6,INPUT);
 pinMode(p7,INPUT);
 pinMode(p8,INPUT);
+
+Serial.begin(9600);
 }
 void loop()
 {
@@ -31,23 +34,33 @@ A = digitalRead(p6);
 B = digitalRead(p7);
 C2 = digitalRead(p8);
 if(C == 1){
-tone(buzz,523); 
+  Serial.println("C");
+tone(buzz,523); //Reproducir nota C (Do)
 }else if(D == 1){
+  Serial.println("D");
 tone(buzz,587); //D (Re)
 }else if(E == 1){
+  Serial.println("E");
 tone(buzz,659); //E (Mi)
 }else if(F == 1){
+  Serial.println("F");
 tone(buzz,698); //F (Fa)
 }else if(G == 1){
+  Serial.println("G");
 tone(buzz,784); //G (Sol)
 }else if(A == 1){
+  Serial.println("A");
 tone(buzz,880); //A (La)
 }else if(B == 1){
+  Serial.println("B");
 tone(buzz,988); //B (Si)
 }else if(C2 == 1){
-tone(buzz,1047); 
+  Serial.println("C2");
+tone(buzz,1047); //C 
 }else{
 noTone(buzz);
 }
 delay(50);
+
+
 }
